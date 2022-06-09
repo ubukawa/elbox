@@ -16,7 +16,7 @@
           },
      "terrainSource": {
             "type": "raster-dem",
-            "tiles": ["https://ubukawa.github.io/shikoku/shikoku-dem/{z}/{x}/{y}.png"],
+            "tiles": ["https://ubukawa.github.io/AW3D30-RGB-JPN/zxy/{z}/{x}/{y}.png"],
             "attribution": "RGB Elevation from ALOS World 3D - 30m (JAXA)",
             "tileSize": 256,
             "maxzoom": 13,
