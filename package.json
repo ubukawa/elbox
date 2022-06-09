@@ -1,0 +1,23 @@
+{
+  "name": "elbox",
+  "version": "1.0.0",
+  "description": "elevation test with mapbox gl js",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubukawa/elbox.git"
+  },
+  "keywords": [],
+  "author": "Taro Ubukawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ubukawa/elbox/issues"
+  },
+  "homepage": "https://github.com/ubukawa/elbox#readme"
+}

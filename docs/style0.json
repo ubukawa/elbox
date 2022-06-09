@@ -1,0 +1,57 @@
+{"version":8,"glyphs":"https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
+    "sources":{
+     "gsj": {
+            "type": "raster",
+            "tiles": ["https://gbank.gsj.jp/seamless/tilemap/detailed/g/{z}/{y}/{x}.png"],
+            "attribution": "日本シームレス地質図WMTS配信サービス",
+            "tileSize": 256,
+            "maxzoom": 13,
+            "minzoom": 5
+          },
+     "gsi-photo": {
+            "type": "raster",
+            "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg"],
+            "attribution": "写真(国土地理院)",
+            "tileSize": 256
+          },
+     "terrainSource": {
+            "type": "raster-dem",
+            "tiles": ["https://ubukawa.github.io/shikoku/shikoku-dem/{z}/{x}/{y}.png"],
+            "attribution": "RGB Elevation from ALOS World 3D - 30m (JAXA)",
+            "tileSize": 256,
+            "maxzoom": 13,
+            "minzoom": 4
+          },
+          "hillshadeSource": {
+            "type": "raster-dem",
+            "tiles": ["https://ubukawa.github.io/AW3D30-RGB-JPN/zxy/{z}/{x}/{y}.png"],
+            "attribution": "RGB Elevation from ALOS World 3D - 30m (JAXA)",
+            "tileSize": 256,
+            "maxzoom": 13,
+            "minzoom": 4
+          }    
+    },
+    "layers":[
+        {
+            "id": "Geology",
+            "type": "raster",
+            "paint":{
+              "raster-opacity": 0.5
+            },
+            "source": "gsj"
+        },
+        {
+            "id": "hills",
+            "type": "hillshade",
+            "source": "hillshadeSource",
+            "layout": {"visibility": "visible"},
+            "paint": {"hillshade-shadow-color": "#473B24"}
+        }
+    ],
+    "terrain":{
+        "source": "terrainSource",
+        "exaggeration": 1
+    },
+    "sprite":"https://gsi-cyberjapan.github.io/gsivectortile-mapbox-gl-js/sprite/std",
+    "metadata":{"gsimaps-vector-url":"https://maps.gsi.go.jp/vector/#7/36.104611/140.084556/&ls=&disp=&d=l","center":{"lng":140.084556,"lat":36.104611},"zl":7}}
+
