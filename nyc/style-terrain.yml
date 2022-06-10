@@ -11,6 +11,22 @@ sources:
     attribution: OpenStreetMap contributors
     maxzoom: 13
     minzoom: 5
+  terrainSource:
+    type: raster-dem
+    tiles: 
+      - https://ubukawa.github.io/AW3D30-RGB-NY/zxy/{z}/{x}/{y}.png
+    attribution: RGB Elevation from ALOS World 3D - 30m (JAXA)
+    tileSize: 256
+    maxzoom: 12
+    minzoom: 4
+  hillshadeSource:
+    type: raster-dem
+    tiles: 
+      - https://ubukawa.github.io/AW3D30-RGB-NY/zxy/{z}/{x}/{y}.png
+    attribution: RGB Elevation from ALOS World 3D - 30m (JAXA)
+    tileSize: 256
+    maxzoom: 12
+    minzoom: 4
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/pg-structure.yml
@@ -20,3 +36,7 @@ layers:
   - !!inc/file layers/ls-water.yml
   - !!inc/file layers/ls-boundary-other.yml
   - !!inc/file layers/pg-building.yml
+  - !!inc/file layers/hills.yml
+terrain:
+  source: terrainSource
+  exaggeration: 1

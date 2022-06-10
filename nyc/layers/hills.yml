@@ -1,0 +1,7 @@
+id: hills
+type: hillshade
+source: hillshadeSource
+layout:
+  visibility: visible
+paint:
+  hillshade-shadow-color: '#473B24'  
