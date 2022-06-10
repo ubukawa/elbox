@@ -1,0 +1,9 @@
+id: background
+type: background
+maxzoom: 18
+paint:
+  background-color:
+    - rgb
+    - 135
+    - 188
+    - 196
