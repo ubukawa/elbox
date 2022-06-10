@@ -1,0 +1,19 @@
+filter:
+  - match
+  - - geometry-type
+  - - Polygon
+    - MultiPolygon
+  - true
+  - false
+id: pg-boundary
+paint:
+  fill-color:
+    - rgb
+    - 255
+    - 0
+    - 0
+#    - 205
+#    - 210
+source: v
+source-layer: boundary
+type: fill

@@ -4,6 +4,6 @@ maxzoom: 18
 paint:
   background-color:
     - rgb
-    - 135
-    - 188
-    - 196
+    - 245
+    - 245
+    - 245
