@@ -20,3 +20,4 @@ layers:
   - !!inc/file layers/ls-water.yml
   - !!inc/file layers/ls-boundary-other.yml
   - !!inc/file layers/pg-building.yml
+  - !!inc/file layers/pt-place.yml
