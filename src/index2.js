@@ -46,7 +46,7 @@ const targets = {
    'pg-building': 'pg-building',
    'hills':'hills'
 };
-map.addControl(new watergis.MapboxLegendControl(targets, {
+map.addControl(new MapboxLegendControl(targets, { //from watergis
     showDefault: false, 
     showCheckbox: false, 
     onlyRendered: true,
