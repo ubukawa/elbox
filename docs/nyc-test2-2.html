@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta charset='utf-8' />
+<title>Test02-2 legend 2 (show all)</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src="https://ubukawa.github.io/bizan/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+<link href="https://ubukawa.github.io/bizan/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet"  />
+<script src="https://watergis.github.io/mapbox-gl-legend/mapbox-gl-legend.js"></script>
+<link href='https://watergis.github.io/mapbox-gl-legend/mapbox-gl-legend.css' rel='stylesheet' />
+
+<style>
+body { margin:0; padding:0; }
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<div id="map"/>
+
+<script>
+const styles = [
+  { 'title': 'terrain', 'uri': 'nyc-Terrain.json' },
+  { 'title': 'no-terrain', 'uri': 'nyc-noTerrain.json' },
+  { 'title': 'test-red', 'uri': 'red.json' },
+];
+
+var mapgl = mapboxgl;  // if you change here to maplibregl, please make sure that you import the module as well.
+mapgl.accessToken = 'pk.eyJ1IjoidC11YnVrYXdhIiwiYSI6ImNrb3NuemYxeDAwazQybm55YXUwZ281MmkifQ.MDqjOP45DIUcpLSCI9JAGg'; //Use your accessToken
+const map = new mapgl.Map({ //edit map info
+  container: 'map',
+  style: 'https://ubukawa.github.io/elbox/nyc-Terrain.json', 
+  center: [-73.99182, 40.74609],
+  hash: true,
+  zoom: 10,
+  minZoom: 6,
+  maxZoom: 16
+});
+
+map.addControl(new mapgl.NavigationControl(), 'bottom-right');
+map.addControl(new mapgl.ScaleControl({
+    maxWidth: 200, unit: 'metric'
+}) );
+
+//mapbox-gl-legend
+const targets = { 
+   'ls-water': 'ls-water',
+   'pg-building': 'Buildings 3D',
+   'hills':'hills',
+//   '["ls-road-line-a", "ls-road-line-b", "ls-road-line-c"]':'test'
+   'ls-road-line-a': 'test',
+   'ls-road-line-b': 'test'
+};
+
+//map.addControl(new watergis.MapboxLegendControl(targets, { //from watergis
+    map.addControl(new watergis.MapboxLegendControl({}, { //from watergis
+    showDefault: true, 
+    showCheckbox: true, //turn on/off check box
+    onlyRendered: true,
+    reverseOrder: true
+}), 'bottom-left');
+
+
+
+</script>
+
+
+</body>
+</html>
