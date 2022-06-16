@@ -11,12 +11,18 @@ import '@watergis/mapbox-gl-legend/css/styles.css';
 //import { MapboxExportControl}  from '@watergis/mapbox-gl-export';
 //import '@watergis/mapbox-gl-export/css/styles.css';
 
+const styles = [
+  { 'title': 'terrain', 'uri': 'nyc-Terrain.json' },
+  { 'title': 'no-terrain', 'uri': 'nyc-noTerrain.json' },
+  { 'title': 'test-red', 'uri': 'red.json' },
+];
+
 
 var mapgl = mapboxgl;  // if you change here to maplibregl, please make sure that you import the module as well.
 mapgl.accessToken = 'pk.eyJ1IjoidC11YnVrYXdhIiwiYSI6ImNrb3NuemYxeDAwazQybm55YXUwZ281MmkifQ.MDqjOP45DIUcpLSCI9JAGg'; //Use your accessToken
 const map = new mapgl.Map({ //edit map info
   container: 'map',
-  style: 'nyc-Terrain.json', 
+  style: styles[0].uri, 
   center: [-73.99182, 40.74609],
   hash: true,
   zoom: 10,
@@ -31,10 +37,6 @@ map.addControl(new mapgl.ScaleControl({
 
 
 //style-switcher
-const styles = [
-    { 'title': 'terrain', 'uri': 'nyc-Terrain.json' },
-    { 'title': 'no-terrain', 'uri': 'nyc-noTerrain.json' }
-];
 MapboxStyleSwitcherControl.DEFAULT_STYLE = styles[1].title;
 map.addControl(new MapboxStyleSwitcherControl(styles), 'top-right');
 
