@@ -19,5 +19,72 @@ layers:
   - !!inc/file layers/pg-water.yml
   - !!inc/file layers/ls-water.yml
   - !!inc/file layers/ls-boundary-other.yml
+  - !!inc/file layers/ls-road-line-h.yml
+  - !!inc/file layers/ls-road-line-h-dash.yml
+  - !!inc/file layers/ls-road-case-underground.yml
+  - !!inc/file layers/ls-road-line-g-underground.yml
+  - !!inc/file layers/ls-road-line-f-underground.yml
+  - !!inc/file layers/ls-road-line-e-underground.yml
+  - !!inc/file layers/ls-road-line-d-underground.yml
+  - !!inc/file layers/ls-road-line-c-underground.yml
+  - !!inc/file layers/ls-road-line-b-underground.yml
+  - !!inc/file layers/ls-road-line-a-underground.yml
+  - !!inc/file layers/ls-road-case-g.yml
+  - !!inc/file layers/ls-road-case-f.yml
+  - !!inc/file layers/ls-road-case-e.yml
+  - !!inc/file layers/ls-road-case-d.yml
+  - !!inc/file layers/ls-road-case-c.yml
+  - !!inc/file layers/ls-road-case-b.yml
+  - !!inc/file layers/ls-road-case-a.yml
+  - !!inc/file layers/ls-road-line-g.yml
+  - !!inc/file layers/ls-road-line-f.yml
+  - !!inc/file layers/ls-road-line-e.yml
+  - !!inc/file layers/ls-road-line-d.yml
+  - !!inc/file layers/ls-road-line-c.yml
+  - !!inc/file layers/ls-road-line-b.yml
+  - !!inc/file layers/ls-road-line-a.yml
+  - !!inc/file layers/ls-road-case-1.yml
+  - !!inc/file layers/ls-road-line-g-1.yml
+  - !!inc/file layers/ls-road-line-f-1.yml
+  - !!inc/file layers/ls-road-line-e-1.yml
+  - !!inc/file layers/ls-road-line-d-1.yml
+  - !!inc/file layers/ls-road-line-c-1.yml
+  - !!inc/file layers/ls-road-line-b-1.yml
+  - !!inc/file layers/ls-road-line-a-1.yml
+  - !!inc/file layers/ls-road-case-2.yml
+  - !!inc/file layers/ls-road-line-g-2.yml
+  - !!inc/file layers/ls-road-line-f-2.yml
+  - !!inc/file layers/ls-road-line-e-2.yml
+  - !!inc/file layers/ls-road-line-d-2.yml
+  - !!inc/file layers/ls-road-line-c-2.yml
+  - !!inc/file layers/ls-road-line-b-2.yml
+  - !!inc/file layers/ls-road-line-a-2.yml
+  - !!inc/file layers/ls-road-case-3.yml
+  - !!inc/file layers/ls-road-line-g-3.yml
+  - !!inc/file layers/ls-road-line-f-3.yml
+  - !!inc/file layers/ls-road-line-e-3.yml
+  - !!inc/file layers/ls-road-line-d-3.yml
+  - !!inc/file layers/ls-road-line-c-3.yml
+  - !!inc/file layers/ls-road-line-b-333.yml
+  - !!inc/file layers/ls-road-line-a-3.yml
+  - !!inc/file layers/ls-road-case-4.yml
+  - !!inc/file layers/ls-road-line-g-4.yml
+  - !!inc/file layers/ls-road-line-f-4.yml
+  - !!inc/file layers/ls-road-line-e-4.yml
+  - !!inc/file layers/ls-road-line-d-4.yml
+  - !!inc/file layers/ls-road-line-c-4.yml
+  - !!inc/file layers/ls-road-line-b-4.yml
+  - !!inc/file layers/ls-road-line-a-4.yml
+  - !!inc/file layers/ls-road-case-5.yml
+  - !!inc/file layers/ls-road-line-g-5.yml
+  - !!inc/file layers/ls-road-line-f-5.yml
+  - !!inc/file layers/ls-road-line-e-5.yml
+  - !!inc/file layers/ls-road-line-d-5.yml
+  - !!inc/file layers/ls-road-line-c-5.yml
+  - !!inc/file layers/ls-road-line-b-5.yml
+  - !!inc/file layers/ls-road-line-a-5.yml
+
+  - !!inc/file layers/ls-route.yml
+
   - !!inc/file layers/pg-building.yml
   - !!inc/file layers/pt-place.yml
