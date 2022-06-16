@@ -33,7 +33,8 @@ map.addControl(new mapgl.ScaleControl({
 //style-switcher
 const styles = [
     { 'title': 'terrain', 'uri': 'nyc-Terrain.json' },
-    { 'title': 'no-terrain', 'uri': 'nyc-noTerrain.json' }
+    { 'title': 'no-terrain', 'uri': 'nyc-noTerrain.json' },
+    { 'title': 'test-red', 'uri': 'red.json' },
 ];
 MapboxStyleSwitcherControl.DEFAULT_STYLE = styles[0].title;
 map.addControl(new MapboxStyleSwitcherControl(styles), 'top-right');
