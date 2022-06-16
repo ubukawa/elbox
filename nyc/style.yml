@@ -1,3 +1,6 @@
+center:
+  - -73.96474
+  - 40.74991
 version: 8
 name: My Style
 sprite: https://ubukawa.github.io/osm-neighbor/sprite/sprite
@@ -11,14 +14,33 @@ sources:
     attribution: OpenStreetMap contributors
     maxzoom: 13
     minzoom: 5
+  hillshadeSource:
+    type: raster-dem
+    tiles: 
+      - https://ubukawa.github.io/AW3D30-RGB-NY/zxy/{z}/{x}/{y}.png
+    attribution: RGB Elevation from ALOS World 3D - 30m (JAXA)
+    tileSize: 256
+    maxzoom: 12
+    minzoom: 4
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/pg-structure.yml
   - !!inc/file layers/pg-landuse.yml #ZL11-
   - !!inc/file layers/pg-nature.yml
-  - !!inc/file layers/pg-water.yml
+  - !!inc/file layers/pg-boundary.yml
+  - !!inc/file layers/pg-place.yml
+  - !!inc/file layers/pg-other.yml
+  - !!inc/file layers/pg-railway.yml
+  - !!inc/file layers/pg-road.yml
+  - !!inc/file layers/pg-route.yml
+  - !!inc/file layers/ls-landuse.yml
+  - !!inc/file layers/ls-nature.yml
+  - !!inc/file layers/pg-water-wetland.yml
   - !!inc/file layers/ls-water.yml
+  - !!inc/file layers/pg-water.yml
   - !!inc/file layers/ls-boundary-other.yml
+  - !!inc/file layers/ls-boundary-international-disputed.yml
+  - !!inc/file layers/ls-boundary-international.yml
   - !!inc/file layers/ls-road-line-h.yml
   - !!inc/file layers/ls-road-line-h-dash.yml
   - !!inc/file layers/ls-road-case-underground.yml
@@ -83,8 +105,33 @@ layers:
   - !!inc/file layers/ls-road-line-c-5.yml
   - !!inc/file layers/ls-road-line-b-5.yml
   - !!inc/file layers/ls-road-line-a-5.yml
-
+  - !!inc/file layers/ls-railway-subway.yml
+  - !!inc/file layers/ls-railway-line.yml
+  - !!inc/file layers/ls-railway-dash.yml
   - !!inc/file layers/ls-route.yml
-
+  - !!inc/file layers/ls-structure.yml
+  - !!inc/file layers/ls-structure-taxiway.yml
+  - !!inc/file layers/ls-structure-runway.yml
+  - !!inc/file layers/ls-building.yml
+  - !!inc/file layers/ls-place.yml
+  - !!inc/file layers/ls-other.yml
+  - !!inc/file layers/pg-building-shadow.yml
   - !!inc/file layers/pg-building.yml
+#  - !!inc/file layers/pg-building-train-station.yml # something happens. See Ground central
+  - !!inc/file layers/pg-building-outline.yml
+  - !!inc/file layers/pt-nature.yml
+  - !!inc/file layers/pt-water.yml
+  - !!inc/file layers/pt-boundary.yml
+  - !!inc/file layers/pt-road.yml
+  - !!inc/file layers/pt-railway.yml
+  - !!inc/file layers/pt-route.yml
+  - !!inc/file layers/pt-structure.yml
+  - !!inc/file layers/pt-building.yml
+  - !!inc/file layers/ls-road-symbol.yml
   - !!inc/file layers/pt-place.yml
+  - !!inc/file layers/pt-other.yml
+  - !!inc/file layers/hills.yml
+# Terrain 3D does not work with current charites
+#terrain:  
+#  source: hillshadeSource
+#  exaggeration: 10
