@@ -16,7 +16,7 @@ var mapgl = mapboxgl;  // if you change here to maplibregl, please make sure tha
 mapgl.accessToken = 'pk.eyJ1IjoidC11YnVrYXdhIiwiYSI6ImNrb3NuemYxeDAwazQybm55YXUwZ281MmkifQ.MDqjOP45DIUcpLSCI9JAGg'; //Use your accessToken
 const map = new mapgl.Map({ //edit map info
   container: 'map',
-  style: 'nyc-Terrain.json', 
+  //style: 'nyc-Terrain.json', 
   center: [-73.99182, 40.74609],
   hash: true,
   zoom: 10,
@@ -35,5 +35,5 @@ const styles = [
     { 'title': 'terrain', 'uri': 'nyc-Terrain.json' },
     { 'title': 'no-terrain', 'uri': 'nyc-noTerrain.json' }
 ];
-MapboxStyleSwitcherControl.DEFAULT_STYLE = styles[1].title;
+MapboxStyleSwitcherControl.DEFAULT_STYLE = styles[0].title;
 map.addControl(new MapboxStyleSwitcherControl(styles), 'top-right');
